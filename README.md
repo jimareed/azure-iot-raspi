@@ -10,12 +10,27 @@ Starter app to connect a Raspberry Pi to Azure IoT Hub.
    - Click on the device and copy the Primary Connection String
 3. Deploy app to Raspberry Pi. Login to the Raspberry Pi and :
 ```
-cd /usr/local
+sudo -i
+cd /opt
 git clone https://github.com/jimareed/azure-iot-raspi
 cd azure-iot-raspi
+npm init
 node install
 export DEVICE_CONNECTION_STRING="<connection_string>"
 node index.js
 ```
+4. Verify message sent (should see something like)
+```
+Sending message: {"value":"Hello from Raspberry Pi!"}
+Message sent: xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx
+```
+5. Verify message received in Azure IoT Hub:
+   - from Visual Studio Code, install the extension Azure IoT Tools
+   - in the Explorer view, select Azure Iot Hub
+   - right click on your device
+   - select 'Start Monitoring Built-in Event Endpoint'
+   - repeat step 4 above
+   - verify the message is displayed in the IoTHubMonitor Output tab in Visual Studio Code
+
 ## Sources
 - https://github.com/Azure-Samples/azure-iot-samples-node
