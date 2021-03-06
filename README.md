@@ -8,7 +8,7 @@ Starter app to connect a Raspberry Pi to Azure IoT Hub.
    - Click on IoT Devices in the Azure IoT Hub and select New to create a new device
    - Enter a device ID and select Save
    - Click on the device and copy the Primary Connection String
-3. Deploy app to Raspberry Pi. Login to the Raspberry Pi and :
+3. Deploy app to Raspberry Pi. Login to the Raspberry Pi and type the following commands:
 ```
 sudo -i
 cd /opt
