@@ -15,7 +15,7 @@ cd /opt
 git clone https://github.com/jimareed/azure-iot-raspi
 cd azure-iot-raspi
 npm init
-node install
+npm install
 export DEVICE_CONNECTION_STRING="<connection_string>"
 node index.js
 ```
